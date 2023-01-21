@@ -14,7 +14,7 @@ app.use(express.json());  //if we donot use it we won't have data in req.body
 
 // routes
 app.get('/', (req, res) => {
-  res.send('<h1>Store API</h1><a href="/api/v1/products">products route</a>');
+  res.send('<h1>Store API</h1><a href="/api/v1/products">Query Based Products Route</a><br><a href="/api/v1/products/static">All Products Route</a>');
 });
 app.use('/api/v1/products', productsRouter);  // products route
 app.use(notFoundMiddleware);
